@@ -7,26 +7,30 @@
 <meta name="description" content="AutoCAD를 간편하게 대체하는 2D CAD 웹앱. 기계 부품도와 공장 공정 · 배관 도면, DWG · DXF 호환.">
 <style>
   :root{--bg:#ffffff;--line:#e5e8ec;--text:#161616;--acc:#3d8bff;}
-  *{box-sizing:border-box;} html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Malgun Gothic","맑은 고딕","Segoe UI",sans-serif;line-height:1.6;}
+  *{box-sizing:border-box;} html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Malgun Gothic","맑은 고딕","Segoe UI",sans-serif;line-height:1.5;}
   a{color:inherit;text-decoration:none;}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
-  header{padding:64px 0 40px;text-align:center;}
-  .logo{font-size:38px;font-weight:800;letter-spacing:.5px;color:#9aa1ab;} .logo .m{color:var(--acc);}
-  .tag{color:#161616;margin-top:6px;font-size:16px;}
-  .cta{margin:34px 0 8px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .run{background:var(--acc);color:#fff;font-weight:700;font-size:18px;padding:15px 40px;border-radius:12px;box-shadow:0 8px 24px rgba(61,139,255,.35);}
+  /* 한 화면 안에 들어오도록 세로 중앙 정렬 · 컴팩트 */
+  body{min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;width:100%;}
+  header{padding:10px 0 6px;text-align:center;}
+  .logo{font-size:30px;font-weight:800;letter-spacing:.5px;color:#9aa1ab;} .logo .m{color:var(--acc);}
+  .tag{color:#161616;margin-top:2px;font-size:14px;}
+  .cta{margin:14px 0 4px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .run{background:var(--acc);color:#fff;font-weight:700;font-size:16px;padding:11px 34px;border-radius:11px;box-shadow:0 6px 18px rgba(61,139,255,.32);}
   .run:hover{filter:brightness(1.08);}
-  .note{color:#3a3a3a;font-size:13px;margin-top:10px;}
-  section{padding:30px 0;border-top:1px solid var(--line);}
-  h2{font-size:20px;margin:0 0 18px;color:#161616;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
-  .card{background:#ffe3ef;border:1px solid #f5b9d4;border-radius:12px;padding:18px 20px;}
-  .card b{display:block;font-size:15.5px;margin-bottom:6px;color:#161616;} .card p{margin:0;color:#2f2f2f;font-size:14px;}
-  .dls{display:flex;gap:14px;flex-wrap:wrap;}
-  .dl{flex:1 1 220px;background:#cfead9;border:1px solid #8bcaa8;border-radius:12px;padding:16px 20px;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s;}
-  .dl:hover{border-color:#2f9e75;box-shadow:0 4px 14px rgba(47,158,117,.3);} .dl b{font-size:16px;color:#161616;} .dl small{color:#276048;}
-  footer{padding:34px 0 60px;color:#4a4a4a;font-size:12.5px;text-align:center;border-top:1px solid var(--line);}
+  .note{color:#3a3a3a;font-size:12px;margin-top:6px;}
+  section{padding:14px 0;border-top:1px solid var(--line);}
+  h2{font-size:16px;margin:0 0 10px;color:#161616;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .card{background:#ffe3ef;border:1px solid #f5b9d4;border-radius:11px;padding:11px 14px;}
+  .card b{display:block;font-size:13.5px;margin-bottom:3px;color:#161616;} .card p{margin:0;color:#2f2f2f;font-size:12px;line-height:1.4;}
+  .dls{display:flex;gap:12px;flex-wrap:wrap;}
+  .dl{flex:1 1 220px;background:#cfead9;border:1px solid #8bcaa8;border-radius:11px;padding:11px 16px;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s;}
+  .dl:hover{border-color:#2f9e75;box-shadow:0 4px 14px rgba(47,158,117,.3);} .dl b{font-size:14.5px;color:#161616;} .dl small{color:#276048;font-size:12px;}
+  footer{padding:12px 0 4px;color:#4a4a4a;font-size:11.5px;text-align:center;border-top:1px solid var(--line);}
   footer b{color:#161616;}
+  @media(max-width:760px){ .grid{grid-template-columns:1fr 1fr;} body{display:block;} }
+  @media(max-width:480px){ .grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
