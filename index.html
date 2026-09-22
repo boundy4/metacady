@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOUNDY METACADY — 편리한 도면 에디터</title>
+<meta name="description" content="AutoCAD를 간편하게 대체하는 2D CAD 웹앱. 기계 부품도와 공장 공정 · 배관 도면, DWG · DXF 호환.">
+<style>
+  :root{--bg:#ffffff;--line:#e5e8ec;--text:#161616;--acc:#3d8bff;}
+  *{box-sizing:border-box;} html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Malgun Gothic","맑은 고딕","Segoe UI",sans-serif;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+  header{padding:64px 0 40px;text-align:center;}
+  .logo{font-size:38px;font-weight:800;letter-spacing:.5px;color:#9aa1ab;} .logo .m{color:var(--acc);}
+  .tag{color:#161616;margin-top:6px;font-size:16px;}
+  .cta{margin:34px 0 8px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .run{background:var(--acc);color:#fff;font-weight:700;font-size:18px;padding:15px 40px;border-radius:12px;box-shadow:0 8px 24px rgba(61,139,255,.35);}
+  .run:hover{filter:brightness(1.08);}
+  .note{color:#3a3a3a;font-size:13px;margin-top:10px;}
+  section{padding:30px 0;border-top:1px solid var(--line);}
+  h2{font-size:20px;margin:0 0 18px;color:#161616;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+  .card{background:#ffe3ef;border:1px solid #f5b9d4;border-radius:12px;padding:18px 20px;}
+  .card b{display:block;font-size:15.5px;margin-bottom:6px;color:#161616;} .card p{margin:0;color:#2f2f2f;font-size:14px;}
+  .dls{display:flex;gap:14px;flex-wrap:wrap;}
+  .dl{flex:1 1 220px;background:#cfead9;border:1px solid #8bcaa8;border-radius:12px;padding:16px 20px;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s;}
+  .dl:hover{border-color:#2f9e75;box-shadow:0 4px 14px rgba(47,158,117,.3);} .dl b{font-size:16px;color:#161616;} .dl small{color:#276048;}
+  footer{padding:34px 0 60px;color:#4a4a4a;font-size:12.5px;text-align:center;border-top:1px solid var(--line);}
+  footer b{color:#161616;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo">BOUNDY <span class="m">METACADY</span></div>
+    <div class="tag">편리한 도면 에디터 · v 1.15</div>
+    <div class="cta"><a class="run" href="app/">프로그램 실행하기 →</a></div>
+    <div class="note">설치 없이 최신 브라우저(크롬 · 엣지)에서 바로 실행됩니다. 인터넷 연결 없이도 그릴 수 있습니다.</div>
+  </div>
+</header>
+<section><div class="wrap">
+  <h2>이런 걸 할 수 있어요</h2>
+  <div class="grid">
+    <div class="card"><b>기계 · 공장 도면</b><p>부품도(1:1)부터 수백 m 공정 설비 도면(1:100+)까지 한 프로그램에서.</p></div>
+    <div class="card"><b>오토캐드 파일 호환</b><p>DWG(2004~2018) 열기, DXF(AutoCAD 2000) 열기·저장. 오토캐드에서 그대로 열립니다.</p></div>
+    <div class="card"><b>P&amp;ID · 공정도 기호</b><p>ISA/ISO 계기 기호, 전기 단선도, 설비 기호 등 140여 종 내장.</p></div>
+    <div class="card"><b>직관적인 입력 창</b><p>오토캐드식 명령 입력과, 초보자용 숫자 입력 창을 함께 제공.</p></div>
+    <div class="card"><b>자석 · 스냅 · 레이어</b><p>점끼리 착 달라붙는 자석 이동, 객체 스냅, 레이어 · 치수 · 빗금.</p></div>
+    <div class="card"><b>인쇄 · 내보내기</b><p>A0~A4 · B1~B4 인쇄와 PDF · PNG · JPG · SVG 저장.</p></div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <h2>사용 설명서 내려받기</h2>
+  <div class="dls">
+    <a class="dl" href="manual/METACADY-Manual-Basic.pdf" download><b>기초 메뉴얼</b><small>PDF · v 1.15</small></a>
+    <a class="dl" href="manual/METACADY-Manual-Detail.pdf" download><b>상세 메뉴얼</b><small>PDF · v 1.15</small></a>
+  </div>
+</div></section>
+<footer><div class="wrap">
+  <b>BOUNDY METACADY</b> v 1.15 — 제작 BOUNDY (정윤성, 한국공학대학교)<br>
+  <a href="https://boundy4.github.io/metacady/" style="color:var(--acc)">https://boundy4.github.io/metacady/</a><br>
+  © 2026 BOUNDY. 무단 배포 · 상업적 사용 · 위변조 · 편집을 금합니다.
+</div></footer>
+</body>
+</html>
